@@ -5,14 +5,12 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@35.246.47.157/flaskdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@35.228.138.102/anime_db'
 app.config['SECRET_KEY'] = 'Z2XW3CE45VRBT6U8MOP'
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
-
-
 
 from application import routes
